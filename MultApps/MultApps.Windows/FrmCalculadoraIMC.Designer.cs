@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblResultadoImc = new System.Windows.Forms.Label();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.panelAdulto = new System.Windows.Forms.Panel();
             this.lblIdadeCmb = new System.Windows.Forms.Label();
             this.cmbIdade = new System.Windows.Forms.ComboBox();
@@ -43,15 +45,16 @@
             this.chkCrianca = new System.Windows.Forms.CheckBox();
             this.chkAdulto = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.lblResultadoImc = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelAdulto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblResultadoImc);
             this.panel1.Controls.Add(this.btnCalcular);
             this.panel1.Controls.Add(this.panelAdulto);
@@ -68,6 +71,29 @@
             this.panel1.Size = new System.Drawing.Size(969, 527);
             this.panel1.TabIndex = 0;
             // 
+            // lblResultadoImc
+            // 
+            this.lblResultadoImc.AutoSize = true;
+            this.lblResultadoImc.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoImc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblResultadoImc.Location = new System.Drawing.Point(84, 385);
+            this.lblResultadoImc.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblResultadoImc.Name = "lblResultadoImc";
+            this.lblResultadoImc.Size = new System.Drawing.Size(0, 33);
+            this.lblResultadoImc.TabIndex = 9;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCalcular.ForeColor = System.Drawing.Color.White;
+            this.btnCalcular.Location = new System.Drawing.Point(76, 308);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(136, 42);
+            this.btnCalcular.TabIndex = 8;
+            this.btnCalcular.Text = "calcular";
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
             // panelAdulto
             // 
             this.panelAdulto.Controls.Add(this.lblIdadeCmb);
@@ -78,14 +104,14 @@
             this.panelAdulto.Controls.Add(this.label3);
             this.panelAdulto.Location = new System.Drawing.Point(78, 190);
             this.panelAdulto.Name = "panelAdulto";
-            this.panelAdulto.Size = new System.Drawing.Size(648, 100);
+            this.panelAdulto.Size = new System.Drawing.Size(430, 100);
             this.panelAdulto.TabIndex = 7;
             // 
             // lblIdadeCmb
             // 
             this.lblIdadeCmb.AutoSize = true;
             this.lblIdadeCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdadeCmb.Location = new System.Drawing.Point(310, 24);
+            this.lblIdadeCmb.Location = new System.Drawing.Point(261, 24);
             this.lblIdadeCmb.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblIdadeCmb.Name = "lblIdadeCmb";
             this.lblIdadeCmb.Size = new System.Drawing.Size(65, 25);
@@ -115,15 +141,15 @@
             "16 anos",
             "17 anos",
             "18 anos"});
-            this.cmbIdade.Location = new System.Drawing.Point(315, 52);
+            this.cmbIdade.Location = new System.Drawing.Point(266, 52);
             this.cmbIdade.Name = "cmbIdade";
-            this.cmbIdade.Size = new System.Drawing.Size(213, 32);
+            this.cmbIdade.Size = new System.Drawing.Size(132, 32);
             this.cmbIdade.TabIndex = 0;
             this.cmbIdade.Visible = false;
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(164, 55);
+            this.txtAltura.Location = new System.Drawing.Point(134, 55);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(100, 29);
             this.txtAltura.TabIndex = 12;
@@ -132,7 +158,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(159, 24);
+            this.label4.Location = new System.Drawing.Point(129, 27);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 25);
@@ -179,6 +205,7 @@
             this.chkFeminino.TabIndex = 5;
             this.chkFeminino.Text = "Feminino";
             this.chkFeminino.UseVisualStyleBackColor = true;
+            this.chkFeminino.CheckedChanged += new System.EventHandler(this.chkFeminino_CheckedChanged);
             // 
             // chkMasculino
             // 
@@ -193,6 +220,7 @@
             this.chkMasculino.TabIndex = 4;
             this.chkMasculino.Text = "Masculino";
             this.chkMasculino.UseVisualStyleBackColor = true;
+            this.chkMasculino.CheckedChanged += new System.EventHandler(this.chkMasculino_CheckedChanged);
             // 
             // label2
             // 
@@ -244,28 +272,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecione";
             // 
-            // btnCalcular
+            // pictureBox1
             // 
-            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCalcular.ForeColor = System.Drawing.Color.White;
-            this.btnCalcular.Location = new System.Drawing.Point(76, 308);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(181, 50);
-            this.btnCalcular.TabIndex = 8;
-            this.btnCalcular.Text = "calcular";
-            this.btnCalcular.UseVisualStyleBackColor = false;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // lblResultadoImc
-            // 
-            this.lblResultadoImc.AutoSize = true;
-            this.lblResultadoImc.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultadoImc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblResultadoImc.Location = new System.Drawing.Point(84, 385);
-            this.lblResultadoImc.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblResultadoImc.Name = "lblResultadoImc";
-            this.lblResultadoImc.Size = new System.Drawing.Size(0, 33);
-            this.lblResultadoImc.TabIndex = 9;
+            this.pictureBox1.Location = new System.Drawing.Point(587, 140);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(316, 362);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmCalculadoraIMC
             // 
@@ -282,6 +295,7 @@
             this.panel1.PerformLayout();
             this.panelAdulto.ResumeLayout(false);
             this.panelAdulto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,5 +319,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblResultadoImc;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
