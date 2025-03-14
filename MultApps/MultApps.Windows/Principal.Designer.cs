@@ -79,6 +79,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.Principal_Shown);
             this.menuStriptPrincipal.ResumeLayout(false);
             this.menuStriptPrincipal.PerformLayout();
             this.ResumeLayout(false);
