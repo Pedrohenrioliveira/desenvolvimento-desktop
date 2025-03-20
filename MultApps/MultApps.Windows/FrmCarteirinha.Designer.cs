@@ -34,14 +34,16 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.CPF = new System.Windows.Forms.Label();
-            this.txtNascimento = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
+            this.pcbImagem = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,21 +110,11 @@
             this.CPF.TabIndex = 4;
             this.CPF.Text = "CPF";
             // 
-            // txtNascimento
-            // 
-            this.txtNascimento.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtNascimento.Location = new System.Drawing.Point(52, 291);
-            this.txtNascimento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNascimento.Multiline = true;
-            this.txtNascimento.Name = "txtNascimento";
-            this.txtNascimento.Size = new System.Drawing.Size(326, 42);
-            this.txtNascimento.TabIndex = 7;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(49, 272);
+            this.label3.Location = new System.Drawing.Point(49, 273);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 16);
@@ -144,6 +136,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pcbImagem);
             this.panel1.Controls.Add(this.lblIdade);
             this.panel1.Controls.Add(this.lblCpf);
             this.panel1.Controls.Add(this.lblNome);
@@ -157,7 +150,7 @@
             // 
             this.lblIdade.AutoSize = true;
             this.lblIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdade.Location = new System.Drawing.Point(118, 212);
+            this.lblIdade.Location = new System.Drawing.Point(72, 214);
             this.lblIdade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdade.Name = "lblIdade";
             this.lblIdade.Size = new System.Drawing.Size(48, 16);
@@ -168,7 +161,7 @@
             // 
             this.lblCpf.AutoSize = true;
             this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpf.Location = new System.Drawing.Point(127, 238);
+            this.lblCpf.Location = new System.Drawing.Point(72, 240);
             this.lblCpf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(42, 16);
@@ -186,15 +179,32 @@
             this.lblNome.TabIndex = 10;
             this.lblNome.Text = "NOME COMPLETO";
             // 
+            // dtpNascimento
+            // 
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNascimento.Location = new System.Drawing.Point(52, 292);
+            this.dtpNascimento.Name = "dtpNascimento";
+            this.dtpNascimento.Size = new System.Drawing.Size(325, 20);
+            this.dtpNascimento.TabIndex = 10;
+            // 
+            // pcbImagem
+            // 
+            this.pcbImagem.Location = new System.Drawing.Point(55, 32);
+            this.pcbImagem.Name = "pcbImagem";
+            this.pcbImagem.Size = new System.Drawing.Size(170, 136);
+            this.pcbImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImagem.TabIndex = 12;
+            this.pcbImagem.TabStop = false;
+            // 
             // FrmCarteirinha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(933, 450);
+            this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtNascimento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.CPF);
@@ -208,6 +218,7 @@
             this.Text = "FrmCarteirinha";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,12 +232,13 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label CPF;
-        private System.Windows.Forms.TextBox txtNascimento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblIdade;
         private System.Windows.Forms.Label lblCpf;
+        private System.Windows.Forms.DateTimePicker dtpNascimento;
+        private System.Windows.Forms.PictureBox pcbImagem;
     }
 }

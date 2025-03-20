@@ -26,5 +26,10 @@ namespace MultApps.Windows
         public const string CriancaNormal = "https://abeso.org.br/wp-content/uploads/2019/12/imc_c_03.png";
         public const string CriancaSobrepeso = "https://abeso.org.br/wp-content/uploads/2019/12/imc_c_02.png";
         public const string CriancaObesidade = "https://abeso.org.br/wp-content/uploads/2019/12/imc_c_01.png";
+
+        public const string crianca = "https://images.emojiterra.com/google/android-oreo/512px/1f9d2-1f3fb.png";
+        public const string jovem = "https://images.emojiterra.com/google/android-10/512px/1f9d1-1f3fb.png";
+        public const string Idoso = "https://images.emojiterra.com/google/android-oreo/512px/1f474-1f3fb.png";
+        public const string Adulto = "https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/share/1f9d4-1f3fb.jpg";
     }
 }
