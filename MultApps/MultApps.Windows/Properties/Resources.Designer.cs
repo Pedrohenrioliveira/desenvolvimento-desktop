@@ -63,6 +63,86 @@ namespace MultApps.Windows.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Balas_festa_junina_brasileira_pacoca_e_pe_de_moleque___Foto_Premium {
+            get {
+                object obj = ResourceManager.GetObject("Balas festa junina brasileira pacoca e pe de moleque _ Foto Premium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_03_20_203314 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-03-20 203314", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Como_desidratar_banana___7_passos {
+            get {
+                object obj = ResourceManager.GetObject("Como desidratar banana - 7 passos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__1_ {
+            get {
+                object obj = ResourceManager.GetObject("download (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Granola_Tradicional_Com_Castanha_Grings_Cerealle_Pacote_800g {
+            get {
+                object obj = ResourceManager.GetObject("Granola Tradicional Com Castanha Grings Cerealle Pacote 800g", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HOMEMADE_SWEETENED_CONDENSED_MILK {
+            get {
+                object obj = ResourceManager.GetObject("HOMEMADE SWEETENED CONDENSED MILK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap How_to_Cut_a_Kiwi {
+            get {
+                object obj = ResourceManager.GetObject("How to Cut a Kiwi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Início___Maria_Açaí {
+            get {
+                object obj = ResourceManager.GetObject("Início - Maria Açaí", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MULTAPPS {
             get {
                 object obj = ResourceManager.GetObject("MULTAPPS", resourceCulture);
@@ -76,6 +156,16 @@ namespace MultApps.Windows.Properties {
         internal static System.Drawing.Bitmap MULTAPPS1 {
             get {
                 object obj = ResourceManager.GetObject("MULTAPPS1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Small_Batch_Strawberry_Jam___The_Baked_Collective {
+            get {
+                object obj = ResourceManager.GetObject("Small-Batch Strawberry Jam - The Baked Collective", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

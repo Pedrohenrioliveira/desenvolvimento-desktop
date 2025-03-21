@@ -13,7 +13,7 @@ namespace MultApps.Windows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCarteirinha());
+            Application.Run(new FrmSistemaDePedidos());
         }
     }
 }

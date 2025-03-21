@@ -71,6 +71,12 @@
     <Compile Include="FrmCarteirinha.Designer.cs">
       <DependentUpon>FrmCarteirinha.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSistemaDePedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSistemaDePedidos.Designer.cs">
+      <DependentUpon>FrmSistemaDePedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImcImagem.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCarteirinha.resx">
       <DependentUpon>FrmCarteirinha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSistemaDePedidos.resx">
+      <DependentUpon>FrmSistemaDePedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -129,6 +138,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MULTAPPS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Início - Maria Açaí.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-03-20 203314.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Granola Tradicional Com Castanha Grings Cerealle Pacote 800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Como desidratar banana - 7 passos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-Batch Strawberry Jam - The Baked Collective.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HOMEMADE SWEETENED CONDENSED MILK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Balas festa junina brasileira pacoca e pe de moleque _ Foto Premium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\How to Cut a Kiwi.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

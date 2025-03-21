@@ -31,5 +31,7 @@ namespace MultApps.Windows
         public const string jovem = "https://images.emojiterra.com/google/android-10/512px/1f9d1-1f3fb.png";
         public const string Idoso = "https://images.emojiterra.com/google/android-oreo/512px/1f474-1f3fb.png";
         public const string Adulto = "https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/share/1f9d4-1f3fb.jpg";
+
+        public const string Acai = "https://i.pinimg.com/originals/35/d0/5d/35d05d54543dfd54815ac39c591fc3c6.png";
     }
 }
