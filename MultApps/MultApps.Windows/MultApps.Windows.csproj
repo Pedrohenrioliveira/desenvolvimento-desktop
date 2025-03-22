@@ -166,5 +166,20 @@
   <ItemGroup>
     <None Include="Resources\How to Cut a Kiwi.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cobertura para Sorvete e Açai Sabor Chocolate Meio Amargo 1_3kg Selecta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cobertura para Sorvete e Açai Sabor Blue Ice Kids 1_3kg Selecta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cobertura para Sorvete e Açai Sabor Blue Ice Kids 1_3kg Selecta1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cobertura para Sorvete e Açai Sabor Morango 1_3kg Selecta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cobertura Concentrado de Sorvete e Sobremesas Selecta 1,3kg - Leite Condensado.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

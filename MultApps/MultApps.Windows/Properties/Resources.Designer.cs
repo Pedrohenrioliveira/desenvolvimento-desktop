@@ -83,6 +83,56 @@ namespace MultApps.Windows.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cobertura_Concentrado_de_Sorvete_e_Sobremesas_Selecta_1_3kg___Leite_Condensado {
+            get {
+                object obj = ResourceManager.GetObject("Cobertura Concentrado de Sorvete e Sobremesas Selecta 1,3kg - Leite Condensado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cobertura_para_Sorvete_e_Açai_Sabor_Blue_Ice_Kids_1_3kg_Selecta {
+            get {
+                object obj = ResourceManager.GetObject("Cobertura para Sorvete e Açai Sabor Blue Ice Kids 1_3kg Selecta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cobertura_para_Sorvete_e_Açai_Sabor_Blue_Ice_Kids_1_3kg_Selecta1 {
+            get {
+                object obj = ResourceManager.GetObject("Cobertura para Sorvete e Açai Sabor Blue Ice Kids 1_3kg Selecta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cobertura_para_Sorvete_e_Açai_Sabor_Chocolate_Meio_Amargo_1_3kg_Selecta {
+            get {
+                object obj = ResourceManager.GetObject("Cobertura para Sorvete e Açai Sabor Chocolate Meio Amargo 1_3kg Selecta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cobertura_para_Sorvete_e_Açai_Sabor_Morango_1_3kg_Selecta {
+            get {
+                object obj = ResourceManager.GetObject("Cobertura para Sorvete e Açai Sabor Morango 1_3kg Selecta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Como_desidratar_banana___7_passos {
             get {
                 object obj = ResourceManager.GetObject("Como desidratar banana - 7 passos", resourceCulture);
