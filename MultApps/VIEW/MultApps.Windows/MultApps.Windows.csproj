@@ -181,5 +181,11 @@
   <ItemGroup>
     <None Include="Resources\Cobertura Concentrado de Sorvete e Sobremesas Selecta 1,3kg - Leite Condensado.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CONTROLLER\MultApps.Controller\MultApps.Controller.csproj">
+      <Project>{25fe32ac-c8bc-4326-8347-d344988463e9}</Project>
+      <Name>MultApps.Controller</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
