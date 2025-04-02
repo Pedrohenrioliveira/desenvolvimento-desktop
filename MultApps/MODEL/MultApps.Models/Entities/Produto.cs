@@ -1,18 +1,17 @@
-﻿using System;
+﻿using MultApps.Models.Entities.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultApps.Models.Entidades
+namespace MultApps.Models.Entities
 {
-    internal class Produto
+    internal class Produto : EntidadeBase
     {
-        public int Id { get; set; }
+        public int CategoriaId { get; set; }
         public string Nome { get; set; }
         public Decimal Preco { get; set; }
-
         public int QuantidadeEmEstoque { get; set; }
-        public Categoria Categoria { get; set; }
     }
 }
