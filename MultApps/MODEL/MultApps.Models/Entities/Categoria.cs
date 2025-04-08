@@ -12,3 +12,4 @@ namespace MultApps.Models.Entities
         public string Nome { get; set; }
     }
 }
+  
