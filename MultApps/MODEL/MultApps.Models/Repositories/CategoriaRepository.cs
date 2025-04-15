@@ -86,7 +86,7 @@ namespace MultApps.Models.Repositories
                 var parametros = new DynamicParameters();
                 parametros.Add("@Id", id);
                 var resultado = db.Query<Categoria>(comandoSql, parametros).FirstOrDefault();
-                return resultado;
+                return resultado;               
             }
         }
     }

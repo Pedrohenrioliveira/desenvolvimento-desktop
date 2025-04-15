@@ -59,6 +59,12 @@
     <Compile Include="FrmAposentadoria.Designer.cs">
       <DependentUpon>FrmAposentadoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastrarUsuario.Designer.cs">
+      <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCalculadoraIMC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="FrmAposentadoria.resx">
       <DependentUpon>FrmAposentadoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastrarUsuario.resx">
+      <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCalculadoraIMC.resx">
       <DependentUpon>FrmCalculadoraIMC.cs</DependentUpon>
