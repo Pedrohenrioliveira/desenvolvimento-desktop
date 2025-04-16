@@ -100,6 +100,7 @@
     <Compile Include="Entities\Abstract\EntidadeBase.cs" />
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Cliente.cs" />
+    <Compile Include="Entities\HashHelper.cs" />
     <Compile Include="Entities\Produto.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Enums\StatusEnum.cs" />

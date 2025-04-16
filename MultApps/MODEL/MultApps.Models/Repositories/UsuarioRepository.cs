@@ -18,16 +18,44 @@ namespace MultApps.Models.Repositories
         {
             using (IDbConnection db = new MySqlConnection(ConnectionString))
             {
-                var comandoSql = @"INSERT INTO usuario (nome, email, senha)
-                                   VALUES(@Nome, @Status )";
+                var comandoSql = @"INSERT INTO usuario (nome, email, senha, cpf, status)
+                   VALUES (@Nome, @Email, @Senha, @Cpf, @Status)";
+
 
                 var parametros = new DynamicParameters();
                 parametros.Add("@Nome", usuario.Nome);
                 parametros.Add("@Email", usuario.Email);
                 parametros.Add("@Senha", usuario.Senha);
+                parametros.Add("@Cpf", usuario.Cpf);
+                parametros.Add("@Status", usuario.Status.ToString().ToLower());
 
                 var resultado = db.Execute(comandoSql, parametros);
                 return resultado > 0;
+            }
+        }
+
+        public bool AtualizarUsuario(Usuario usuario)
+        {
+            using (IDbConnection db = new MySqlConnection(ConnectionString))
+            {
+                var comandoSql = @"UPDATE usuario
+                       SET nome = @Nome,
+                           email = @Email,
+                           senha = @Senha,
+                           cpf = @Cpf
+                           status = @Status
+                       WHERE id = @Id";
+
+                var parametros = new DynamicParameters();
+                parametros.Add("@Id", usuario.Id);
+                parametros.Add("@Nome", usuario.Nome);
+                parametros.Add("@Email", usuario.Email);
+                parametros.Add("@Senha", usuario.Senha);
+                parametros.Add("@Cpf", usuario.Cpf);
+                parametros.Add("@Status", usuario.Status.ToString().ToLower());
+
+                var resposta = db.Execute(comandoSql, parametros);
+                return resposta > 0;
             }
         }
 
@@ -47,11 +75,11 @@ namespace MultApps.Models.Repositories
 
         }
 
-        public List<Usuario> ListarTodasCategorias()
+        public List<Usuario> ListarTodosUsuarios()
         {
             using (IDbConnection db = new MySqlConnection(ConnectionString))
             {
-                var comandoSql = @"SELECT id, nome, email, senha, data_criacao AS DataCadastro, data_alteracao AS DataAlteracao, status
+                var comandoSql = @"SELECT id, nome, email, senha, cpf, data_criacao AS DataCadastro, data_alteracao AS DataAlteracao, status
                                    FROM usuario";
                 var resultado = db.Query<Usuario>(comandoSql).ToList();
                 return resultado;
@@ -62,7 +90,7 @@ namespace MultApps.Models.Repositories
         {
             using (IDbConnection db = new MySqlConnection(ConnectionString))
             {
-                var comandoSql = @"SELECT id, nome, email, senha, data_criacao, data_alteracao, status
+                var comandoSql = @"SELECT id, nome, email, senha, cpf, data_criacao, data_alteracao, status
                                    FROM usuario WHERE id = @Id";
                 var parametros = new DynamicParameters();
                 parametros.Add("@Id", id);
