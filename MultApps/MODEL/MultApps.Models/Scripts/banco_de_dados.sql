@@ -4,18 +4,30 @@ USE multapps_dev;
 CREATE TABLE IF NOT EXISTS categoria (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	nome VARCHAR(100) NOT NULL,
-	data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	data_criacao TIMESTAMP NOT NULL,
 	data_alteracao DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	status ENUM ('intivo','ativo','excluido') NOT NULL
+	status ENUM ('inativo','ativo','excluido') NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Produtos (
+CREATE TABLE IF NOT EXISTS produtos (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	categoria_id INT NOT NULL,
 	nome VARCHAR(100) NOT NULL,
 	quantidade_estoque INT NOT NULL,
-	data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	data_criacao TIMESTAMP NOT NULL,
 	data_alteracao DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	status ENUM ('intivo','ativo','excluido') NOT NULL,
+	status ENUM ('inativo','ativo','excluido') NOT NULL,
 	FOREIGN KEY (categoria_id) REFERENCES categoria(id)
-)
+);
+
+CREATE TABLE IF NOT EXISTS usuario (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(250) NOT NULL,
+    email VARCHAR(250) NOT NULL,
+    senha VARCHAR(250) NOT NULL,
+    cpf VARCHAR(14) NOT NULL,
+    data_criacao TIMESTAMP NOT NULL,
+	data_alteracao DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    data_ultimo_acesso TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	status ENUM ('inativo','ativo') NOT NULL
+);
