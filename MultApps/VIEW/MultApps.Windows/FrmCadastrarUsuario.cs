@@ -20,12 +20,12 @@ namespace MultApps.Windows
         public FrmCadastrarUsuario()
         {
             InitializeComponent();
-            var status = new[] { "ativo", "inativo" };
+            var status = new[] { "inativo", "ativo" };
             var filtros = new[] { "todos", "ativos", "inativos" };
             cmbStatus.Items.AddRange(status);
             cmbStatus.Items.AddRange(filtros);
 
-            cmbStatus.SelectedIndex = 0;
+            cmbStatus.SelectedIndex = 1;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -53,6 +53,8 @@ namespace MultApps.Windows
                 if (sucesso)
                 {
                     MessageBox.Show($"Usuário {usuario.Nome} cadastrado com sucesso!");
+                    CarregarTodosUsuario();
+                    LimparCampos();
                 }
                 else
                 {
@@ -103,6 +105,30 @@ namespace MultApps.Windows
                 return true;
             }
             return false;
+        }
+
+        private void FrmCadastrarUsuario_Load(object sender, EventArgs e)
+        {
+            CarregarTodosUsuario();
+        }
+
+        private void CarregarTodosUsuario()
+        {
+            var usuarioRepository = new UsuarioRepository();
+
+            var listaUsuario = usuarioRepository.ListarUsuarios();
+            dataGridView1.DataSource = listaUsuario;
+        }
+
+        private void LimparCampos()
+        {
+            txtCpf.Clear();
+            txtEmail.Clear();
+            txtNome.Clear();
+            txtSenha.Clear();
+            txtDataCriacao.Clear();
+            txtUltimoAcesso.Clear();
+            cmbStatus.SelectedIndex = 1;
         }
     }
 }

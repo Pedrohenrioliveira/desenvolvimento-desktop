@@ -33,7 +33,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtDataAlteracao = new System.Windows.Forms.TextBox();
+            this.txtUltimoAcesso = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -98,16 +98,16 @@
             this.txtNome.Location = new System.Drawing.Point(31, 51);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(196, 20);
-            this.txtNome.TabIndex = 4;
+            this.txtNome.TabIndex = 1;
             // 
-            // txtDataAlteracao
+            // txtUltimoAcesso
             // 
-            this.txtDataAlteracao.Enabled = false;
-            this.txtDataAlteracao.Location = new System.Drawing.Point(133, 214);
-            this.txtDataAlteracao.Multiline = true;
-            this.txtDataAlteracao.Name = "txtDataAlteracao";
-            this.txtDataAlteracao.Size = new System.Drawing.Size(94, 19);
-            this.txtDataAlteracao.TabIndex = 8;
+            this.txtUltimoAcesso.Enabled = false;
+            this.txtUltimoAcesso.Location = new System.Drawing.Point(133, 214);
+            this.txtUltimoAcesso.Multiline = true;
+            this.txtUltimoAcesso.Name = "txtUltimoAcesso";
+            this.txtUltimoAcesso.Size = new System.Drawing.Size(94, 19);
+            this.txtUltimoAcesso.TabIndex = 6;
             // 
             // label3
             // 
@@ -125,7 +125,7 @@
             this.cmbStatus.Location = new System.Drawing.Point(31, 261);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(96, 21);
-            this.cmbStatus.TabIndex = 9;
+            this.cmbStatus.TabIndex = 7;
             // 
             // label6
             // 
@@ -147,7 +147,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(29, 301);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(197, 35);
-            this.btnSalvar.TabIndex = 11;
+            this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -158,7 +158,7 @@
             this.txtDataCriacao.Location = new System.Drawing.Point(30, 213);
             this.txtDataCriacao.Name = "txtDataCriacao";
             this.txtDataCriacao.Size = new System.Drawing.Size(97, 20);
-            this.txtDataCriacao.TabIndex = 6;
+            this.txtDataCriacao.TabIndex = 5;
             // 
             // btnDeletar
             // 
@@ -166,7 +166,7 @@
             this.btnDeletar.Location = new System.Drawing.Point(30, 342);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(196, 29);
-            this.btnDeletar.TabIndex = 14;
+            this.btnDeletar.TabIndex = 9;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
             // 
@@ -175,7 +175,7 @@
             this.txtEmail.Location = new System.Drawing.Point(31, 90);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(196, 20);
-            this.txtEmail.TabIndex = 16;
+            this.txtEmail.TabIndex = 2;
             // 
             // label2
             // 
@@ -192,7 +192,7 @@
             this.txtSenha.Location = new System.Drawing.Point(31, 135);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(196, 20);
-            this.txtSenha.TabIndex = 18;
+            this.txtSenha.TabIndex = 3;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // label7
@@ -231,7 +231,7 @@
             this.groupBox1.Controls.Add(this.txtDataCriacao);
             this.groupBox1.Controls.Add(this.btnSalvar);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtDataAlteracao);
+            this.groupBox1.Controls.Add(this.txtUltimoAcesso);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -247,7 +247,7 @@
             this.txtCpf.Mask = "999,999,999-99";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(197, 20);
-            this.txtCpf.TabIndex = 25;
+            this.txtCpf.TabIndex = 4;
             // 
             // btnLimpar
             // 
@@ -255,7 +255,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(29, 377);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(197, 31);
-            this.btnLimpar.TabIndex = 13;
+            this.btnLimpar.TabIndex = 10;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             // 
@@ -269,7 +269,7 @@
             this.comboBox1.Location = new System.Drawing.Point(466, 56);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(109, 21);
-            this.comboBox1.TabIndex = 26;
+            this.comboBox1.TabIndex = 10;
             // 
             // label9
             // 
@@ -296,6 +296,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCadastrarUsuario";
             this.Text = "FrmCadastrarUsuario";
+            this.Load += new System.EventHandler(this.FrmCadastrarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -311,7 +312,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtDataAlteracao;
+        private System.Windows.Forms.TextBox txtUltimoAcesso;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label6;
