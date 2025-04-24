@@ -82,5 +82,66 @@ namespace MultApps.Models.Repositories
             }
    
         }  
+
+        public DataTable ListarUsuarioPorStatus(int status)
+        {
+            using (IDbConnection db = new MySqlConnection(ConnectionString))
+            {
+                var comandoSql = @"SELECT id AS Id, 
+                                          nome AS Nome, 
+                                          cpf AS Cpf, 
+                                          email AS Email, 
+                                          data_cadastro AS DataCadastro,
+                                          data_alteracao AS DataAlteracao,
+                                          data_ultimo_acesso AS DataUltimoAcesso     
+                                   FROM usuario
+                                   WHERE status = @Status";
+
+                var parametros = new DynamicParameters();
+                parametros.Add("@Status", status);
+
+                var usuarios = db.Query<Usuario>(comandoSql, parametros).ToList();
+
+                var dataTable = new DataTable();
+                dataTable.Columns.Add("Id", typeof(int));
+                dataTable.Columns.Add("Nome", typeof(string));
+                dataTable.Columns.Add("Cpf", typeof(string));
+                dataTable.Columns.Add("Email", typeof(string));
+                dataTable.Columns.Add("Data Cadastro", typeof(DateTime));
+                dataTable.Columns.Add("Data Alteracao", typeof(DateTime));
+                dataTable.Columns.Add("Data Ultimo Acesso", typeof(DateTime));
+                foreach (var usuario in usuarios)
+                {
+                    dataTable.Rows.Add(usuario.Id,
+                        usuario.Nome,
+                        usuario.Cpf,
+                        usuario.Email,
+                        usuario.DataCriacao,
+                        usuario.DataAlteracao,
+                        usuario.DataUltimoAcesso);
+                }
+                return dataTable;
+            }
+
+        }
+
+        public Usuario ObterUsuarioPorId(int id)
+        {
+            using (IDbConnection db = new MySqlConnection(ConnectionString))
+            {
+                var comandoSql = @"SELECT id AS Id, 
+                                          nome AS Nome, 
+                                          cpf AS Cpf, 
+                                          email AS Email, 
+                                          data_cadastro AS DataCadastro,
+                                          data_alteracao AS DataAlteracao,
+                                          data_ultimo_acesso AS DataUltimoAcesso
+                                   FROM categoria WHERE id = @Id";
+                var parametros = new DynamicParameters();
+                parametros.Add("@Id", id);
+                var resultado = db.Query<Usuario>(comandoSql, parametros).FirstOrDefault();
+                return resultado;
+            }
+        }
     }
 }

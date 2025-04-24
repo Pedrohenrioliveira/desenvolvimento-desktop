@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Text;
+using MultApps.Models.Services;
 
 namespace MultApps.Windows
 {
@@ -26,6 +27,8 @@ namespace MultApps.Windows
             cmbStatus.Items.AddRange(filtros);
 
             cmbStatus.SelectedIndex = 1;
+            cmbFiltro.SelectedIndex = 0;
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -36,7 +39,7 @@ namespace MultApps.Windows
                 usuario.Nome = txtNome.Text;
                 usuario.Cpf = txtCpf.Text;
                 usuario.Email = txtEmail.Text;
-                usuario.Senha = txtSenha.Text;               
+                usuario.Senha = CriptografiaService.Criptografar(txtSenha.Text);              
                 usuario.Status = (StatusEnum)cmbStatus.SelectedIndex;
 
                 var usuarioRepository = new UsuarioRepository();
@@ -119,7 +122,6 @@ namespace MultApps.Windows
             var listaUsuario = usuarioRepository.ListarUsuarios();
             dataGridView1.DataSource = listaUsuario;
         }
-
         private void LimparCampos()
         {
             txtCpf.Clear();
@@ -129,6 +131,55 @@ namespace MultApps.Windows
             txtDataCriacao.Clear();
             txtUltimoAcesso.Clear();
             cmbStatus.SelectedIndex = 1;
+        }
+
+        private void cmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var usuarioRepositorio = new UsuarioRepository();
+            switch (cmbFiltro.SelectedIndex)
+            {
+                case 0:
+                    CarregarTodosUsuario();
+                    break;
+                case 1:
+                    var usuariosAtivos = usuarioRepositorio.ListarUsuarioPorStatus(1);
+                    dataGridView1.DataSource = usuariosAtivos;
+                    break;
+                case 2:
+                    var usuariosInativos = usuarioRepositorio.ListarUsuarioPorStatus(0);
+                    dataGridView1.DataSource = usuariosInativos;
+                    break;
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                MessageBox.Show($"Houve um erro ao clicar duas vezes sobre o Grid");
+                return;
+            }
+
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+            var usuarioId = (int)row.Cells[0].Value;
+
+            var usuarioRepository = new UsuarioRepository();
+            var usuario = usuarioRepository.ObterUsuarioPorId(2);
+
+            if (usuario == null)
+            {
+                MessageBox.Show($"Categoria: #{usuarioId} não encontrada");
+                return;
+            }
+
+            txtNome.Text = usuario.Nome;
+            cmbStatus.SelectedIndex = (int)usuario.Status;
+            txtDataCriacao.Text = usuario.DataCriacao.ToString("dd/MM/yyyy HH:mm");
+            txtDataAlteracao.Text = categoria.DataAlteracao.ToString("dd/MM/yyyy HH:mm");
+
+            btnLimpar.Enabled = true;
+            btnSalvar.Text = "Salvar alterações";
         }
     }
 }
