@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8F02966-6771-4E3B-9DEB-C266C890D827}</ProjectGuid>
+    <ProjectGuid>{01CD2565-CF8F-4CD5-B1CC-7040E65E260F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MultApps.Windows</RootNamespace>
     <AssemblyName>MultApps.Windows</AssemblyName>
@@ -53,29 +53,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAposentadoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAposentadoria.Designer.cs">
-      <DependentUpon>FrmAposentadoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCadastrarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCadastrarUsuario.Designer.cs">
-      <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmCalculadoraIMC.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCalculadoraIMC.Designer.cs">
       <DependentUpon>FrmCalculadoraIMC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCarteirinha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCarteirinha.Designer.cs">
-      <DependentUpon>FrmCarteirinha.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCategoria.cs">
       <SubType>Form</SubType>
@@ -83,11 +65,17 @@
     <Compile Include="FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSistemaDePedidos.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSistemaDePedidos.Designer.cs">
-      <DependentUpon>FrmSistemaDePedidos.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="ImcImagem.cs" />
     <Compile Include="Principal.cs">
@@ -98,29 +86,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneroEnum.cs" />
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmAposentadoria.resx">
-      <DependentUpon>FrmAposentadoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCadastrarUsuario.resx">
-      <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCalculadoraIMC.resx">
       <DependentUpon>FrmCalculadoraIMC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCarteirinha.resx">
-      <DependentUpon>FrmCarteirinha.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSistemaDePedidos.resx">
-      <DependentUpon>FrmSistemaDePedidos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -152,60 +138,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MULTAPPS.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MULTAPPS1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Início - Maria Açaí.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-03-20 203314.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Granola Tradicional Com Castanha Grings Cerealle Pacote 800g.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Como desidratar banana - 7 passos.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\download %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Small-Batch Strawberry Jam - The Baked Collective.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HOMEMADE SWEETENED CONDENSED MILK.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Balas festa junina brasileira pacoca e pe de moleque _ Foto Premium.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\How to Cut a Kiwi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cobertura para Sorvete e Açai Sabor Chocolate Meio Amargo 1_3kg Selecta.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cobertura para Sorvete e Açai Sabor Blue Ice Kids 1_3kg Selecta.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cobertura para Sorvete e Açai Sabor Blue Ice Kids 1_3kg Selecta1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cobertura para Sorvete e Açai Sabor Morango 1_3kg Selecta.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cobertura Concentrado de Sorvete e Sobremesas Selecta 1,3kg - Leite Condensado.jpg" />
+    <None Include="Resources\Design sem nome.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\CONTROLLER\MultApps.Controller\MultApps.Controller.csproj">
-      <Project>{25fe32ac-c8bc-4326-8347-d344988463e9}</Project>
+      <Project>{584475f0-e11a-4979-8410-6bc64f2ecaf2}</Project>
       <Name>MultApps.Controller</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\MODEL\MultApps.Models\MultApps.Models.csproj">
-      <Project>{216c0f72-d976-4283-9820-782470dccab5}</Project>
+      <Project>{e61eb934-93a8-40fa-b301-b0ab2a4c1fb6}</Project>
       <Name>MultApps.Models</Name>
     </ProjectReference>
   </ItemGroup>

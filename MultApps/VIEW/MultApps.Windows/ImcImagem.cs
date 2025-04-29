@@ -13,7 +13,7 @@ namespace MultApps.Windows
         public const string MasculinoSobrepeso = "https://abeso.org.br/wp-content/uploads/2019/12/imc_04.png";
         public const string MasculinoObesidadeGrau1 = "https://abeso.org.br/wp-content/uploads/2019/12/imc_03.png";
         public const string MasculinoObesidadeGrau2 = "https://abeso.org.br/wp-content/uploads/2019/12/imc_02.png";
-        public const string MasculinoObesidadeGrau3 = "https://abeso.org.br/wp-content/uploads/2019/12/imc_01.png";
+        public const string MasculinoObesidadeGrau3 = "https://abeso.org.br/wp-content/uploads/2019/12/imc_02.png";
 
         public const string FemininoAbaixoDoNormal = "https://abeso.org.br/wp-content/uploads/2019/12/imc_m_06.png";
         public const string FemininoNormal = "https://abeso.org.br/wp-content/uploads/2019/12/imc_m_05.png";
@@ -27,11 +27,5 @@ namespace MultApps.Windows
         public const string CriancaSobrepeso = "https://abeso.org.br/wp-content/uploads/2019/12/imc_c_02.png";
         public const string CriancaObesidade = "https://abeso.org.br/wp-content/uploads/2019/12/imc_c_01.png";
 
-        public const string crianca = "https://images.emojiterra.com/google/android-oreo/512px/1f9d2-1f3fb.png";
-        public const string jovem = "https://images.emojiterra.com/google/android-10/512px/1f9d1-1f3fb.png";
-        public const string Idoso = "https://images.emojiterra.com/google/android-oreo/512px/1f474-1f3fb.png";
-        public const string Adulto = "https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/share/1f9d4-1f3fb.jpg";
-
-        public const string Acai = "https://i.pinimg.com/originals/35/d0/5d/35d05d54543dfd54815ac39c591fc3c6.png";
     }
 }

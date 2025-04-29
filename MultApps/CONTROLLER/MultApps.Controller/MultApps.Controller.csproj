@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25FE32AC-C8BC-4326-8347-D344988463E9}</ProjectGuid>
+    <ProjectGuid>{584475F0-E11A-4979-8410-6BC64F2ECAF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MultApps.Controller</RootNamespace>
@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\MODEL\MultApps.Models\MultApps.Models.csproj">
-      <Project>{216c0f72-d976-4283-9820-782470dccab5}</Project>
+      <Project>{e61eb934-93a8-40fa-b301-b0ab2a4c1fb6}</Project>
       <Name>MultApps.Models</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,35 +1,31 @@
-# Desenvolver aplicações desktop 💻
-Unidade Curricular Desenvolvimento Desktop usando: Git, Visual Studio 2022, C# e Windows Forms com . NET Framework 4.8
+# UC5: Desenvolver aplicações desktop
+Unidade Curricular Desenvolvimento Desktop usando: Git, Visual Studio 2022, C# e Windows Forms com .Net Framework 4.8
 
-Carga horária mínima: 140h  
-Carga horária máxima: 140h
+Carga horária mínima: 🕛140h  
+Carga horária máxima: 🕛140h
 
-## 👉 Indicadores
+## 📈 Indicadores
 - Define IDE conforme aplicação a ser desenvolvida
-- Escreve Linhas de código conforme requisitos do projeto.
+- Escreve linhas de código conforme requisitos do projeto.
 - Realiza a conexão da aplicação com o banco de dados de acordo o Sistema Gerenciador de Banco de Dados definido.
 - Testa o código desenvolvido conforme os requisitos do projeto.
-- Versiona e disponibiliza a aplicação desenvolvida de acordo com as melhores
-práticas do mercado.
+- Versiona e disponibiliza a aplicação desenvolvida de acordo com as melhores práticas do mercado.
 
-## 🍃 Elementos da Competência
+## 🔥 Elementos da Competência
 
-### 🧠 Conhecimentos
+### 📋 Conhecimentos
 1. IDE - Integrated Development Environment: conceitos e usabilidade.
-2. Linguagem de programação: conceitos, definições, conexão com banco de dados
-e características.
+2. Linguagem de programação: conceitos, definições, conexão com banco de dados e características.
 3. Tratamento de exceção: conceitos, testes, tratativas e aplicabilidade.
 4. Versionamento: conceitos, tipos e usabilidade
 
-### 🧙 Habilidades
+### 🚀 Habilidades
 1. Interpretar requisitos, diagramas e erros.
 2. Desenvolver raciocínio lógico.
 3. Categorizar etapas do processo de trabalho.
 4. Comunicar-se de maneira assertiva.
-5. Utilizar termos técnicos nas rotinas de trabalho.
 
-
-### 💰 Atitudes/Valores
+### 🏅 Atitudes/Valores
 1. Responsabilidade e comprometimento com os acordos estabelecidos.
 2. Cordialidade no trato com as pessoas.
 3. Proatividade no desenvolvimento das atividades profissionais.

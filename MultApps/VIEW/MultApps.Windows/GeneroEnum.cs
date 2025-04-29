@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace MultApps.Windows
 {
-    enum ClassificacaoImc
+    enum GeneroEnum
     {
-        AbaixoNormal,
-        Normal,
-        SobrePeso,
-        ObsidadeGrau1,
-        ObsidadeGrau2,
-        ObsidadeGrau3,
+        Masculino,
+        Feminino
     }
 }

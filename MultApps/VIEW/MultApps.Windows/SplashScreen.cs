@@ -12,11 +12,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MultApps.Windows
 {
-    public partial class SplashScreen : Form
+    public partial class SplashScreen: Form
     {
         public SplashScreen()
         {
             InitializeComponent();
+        }
+
+        private void SplashScreen_Load(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongDateString();
         }
 
         private void SplashScreen_Shown(object sender, EventArgs e)
@@ -31,12 +36,6 @@ namespace MultApps.Windows
             Thread.Sleep(500);
 
             this.Close();
-        }
-
-        private void SplashScreen_Load(object sender, EventArgs e)
-        {
-            label1.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy");
-
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using MultApps.Models.Entities;
-using MultApps.Models.Enums;
-using MultApps.Models.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MultApps.Models.Entities;
+using MultApps.Models.Enums;
+using MultApps.Models.Repositories;
 
 namespace MultApps.Windows
 {
@@ -20,14 +20,13 @@ namespace MultApps.Windows
             InitializeComponent();
             CarregarTodasCategorias();
         }
-
+        
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
             var categoria = new Categoria();
             categoria.Nome = txtNome.Text;
             categoria.Status = (StatusEnum)cmbStatus.SelectedIndex;
-
+            
             var categoriaRepository = new CategoriaRepository();
 
             if (string.IsNullOrEmpty(txtId.Text))
@@ -60,6 +59,7 @@ namespace MultApps.Windows
 
 
             CarregarTodasCategorias();
+
         }
 
         private void CarregarTodasCategorias()
@@ -90,7 +90,7 @@ namespace MultApps.Windows
                 HeaderText = "Data de Cadastro",
                 DefaultCellStyle = new DataGridViewCellStyle { Format = "dd/MM/yyyy HH:MM" },
                 MinimumWidth = 200
-
+                
             });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
@@ -104,15 +104,17 @@ namespace MultApps.Windows
             {
                 DataPropertyName = "Status",
                 HeaderText = "Status",
-                DefaultCellStyle = new DataGridViewCellStyle
-                {
-
-                }
+                DefaultCellStyle = new DataGridViewCellStyle {
+                    
+                    }
             });
 
             dataGridView1.DataSource = listaDeCategorias;
 
+
+            //Depois de preencher será chamado o metodo CellFormating para verificar o status e pintar
             dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -137,6 +139,7 @@ namespace MultApps.Windows
                 }
             }
         }
+
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
@@ -144,27 +147,30 @@ namespace MultApps.Windows
                 MessageBox.Show($"Houve um erro ao clicar duas vezes sobre o Grid");
                 return;
             }
-
+            
+            // Obtenha a linha selecionada
             DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
+            // Obtenha o ID da categoria da linha selecionada
             var categoriaId = (int)row.Cells[0].Value;
 
+            // Use o método ObterCategoriaPorId para buscar os dados da categoria no banco de dados
             var categoriaRepository = new CategoriaRepository();
-            var categoria = categoriaRepository.ObterCategoriaPorId(2);
+            var categoria = categoriaRepository.ObterCategoriaPorId(categoriaId);
 
             if (categoria == null)
             {
                 MessageBox.Show($"Categoria: #{categoriaId} não encontrada");
                 return;
             }
-
+            // Preencha os campos de edição com os dados obtidos
             txtId.Text = categoria.Id.ToString();
             txtNome.Text = categoria.Nome;
             cmbStatus.SelectedIndex = (int)categoria.Status;
-            txtDataCriacao.Text = categoria.DataCriacao.ToString("dd/MM/yyyy HH:mm");
+            txtDataCadastro.Text = categoria.DataCriacao.ToString("dd/MM/yyyy HH:mm");
             txtDataAlteracao.Text = categoria.DataAlteracao.ToString("dd/MM/yyyy HH:mm");
 
-            btnLimpar.Enabled = true;
+            btnDeletar.Enabled = true;
             btnSalvar.Text = "Salvar alterações";
         }
 
@@ -172,7 +178,7 @@ namespace MultApps.Windows
         {
             txtId.Text = string.Empty;
             txtNome.Text = string.Empty;
-            txtDataCriacao.Text = string.Empty;
+            txtDataCadastro.Text = string.Empty;
             txtDataAlteracao.Text = string.Empty;
             cmbStatus.SelectedIndex = -1;
         }
