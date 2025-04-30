@@ -9,7 +9,7 @@ namespace MultApps.Models.Repositories
 {
     public class UsuarioRepository
     {
-        public string ConnectionString = "Server=localhost;Database=multapps_dev; Uid=root;Pwd=SuperSenha@10";
+        public string ConnectionString = "Server=localhost;Database=multapps_dev; Uid=root;Pwd=root";
 
         public bool CadastrarUsuario(Usuario usuario)
         {
