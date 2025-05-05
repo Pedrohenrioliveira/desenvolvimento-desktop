@@ -21,6 +21,8 @@ namespace MultApps.Windows
         public FrmCadastrarUsuario()
         {
             InitializeComponent();
+            CarregarTodosUsuario();
+
             var status = new[] { "inativo", "ativo" };
             var filtros = new[] { "todos", "ativos", "inativos" };
             cmbStatus.Items.AddRange(status);
