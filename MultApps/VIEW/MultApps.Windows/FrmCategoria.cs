@@ -112,7 +112,6 @@ namespace MultApps.Windows
             dataGridView1.DataSource = listaDeCategorias;
 
 
-            //Depois de preencher será chamado o metodo CellFormating para verificar o status e pintar
             dataGridView1.CellFormatting += dataGridView1_CellFormatting;
 
         }
