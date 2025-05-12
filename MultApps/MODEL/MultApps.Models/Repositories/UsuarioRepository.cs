@@ -51,7 +51,7 @@ namespace MultApps.Models.Repositories
                                           cpf AS Cpf, 
                                           email AS Email, 
                                           data_cadastro AS DataCadastro,
-                                          data_alteracao AS DataAlteracao,
+                        1                  data_alteracao AS DataAlteracao,
                                           data_ultimo_acesso AS DataUltimoAcesso     
                                    FROM usuario"; 
                 var usuarios = db.Query<Usuario>(comandoSql).ToList();
