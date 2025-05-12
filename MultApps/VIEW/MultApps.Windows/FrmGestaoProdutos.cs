@@ -16,26 +16,32 @@ namespace MultApps.Windows
 {
     public partial class FrmGestaoProdutos : Form
     {
-        public FrmGestaoProdutos()
+ 
+        ProdutoRepositories produtoRepo = new ProdutoRepositories();
+
+        private void CarregarGrid()
         {
-            InitializeComponent();
-        }
+            DataTable dt = produtoRepo.ListarProdutos();
 
-        private void bntNovoProduto_Click(object sender, EventArgs e)
-        {
-            var produto = new Produto();
-            int Estoque = int.Parse(txtEstoque.Text);
-            produto.Nome = txtNome.Text;
-            produto.Preco = txtPreco.Text;
-            produto.Url = txtUrl.Text;
-            produto.QuantidadeEmEstoque = Estoque;
-            produto.Status = (StatusEnum)cmbStatus.SelectedIndex;
-
-            var produtoRepository = new ProdutosRepository();
-
-          
-
+           // Aplicar filtro de Status
+            string statusFiltro = cmbStatusFiltro.SelectedItem?.ToString();
+            if (statusFiltro != null && statusFiltro != "Todos")
+            {
+                dt = dt.Select($"Status = '{statusFiltro}'").CopyToDataTable();
             }
+
+            // Aplicar filtro de Categoria
+            string categoriaFiltro = cmbCategoriaFiltro.SelectedItem?.ToString();
+            if (categoriaFiltro != null && categoriaFiltro != "Todas")
+            {
+                dt = dt.Select($"CategoriaNome = '{categoriaFiltro}'").CopyToDataTable();
+            }
+
+            dgvProdutos.DataSource = dt;
         }
+
+
+
+
     }
 }

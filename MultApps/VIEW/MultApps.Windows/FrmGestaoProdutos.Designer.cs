@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbCategoriaFiltro = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.bntNovoProduto = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGrid = new System.Windows.Forms.Button();
+            this.dgvInformacao = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -46,13 +46,13 @@
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbStatusFiltro = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformacao)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,13 +65,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestão de Produtos";
             // 
-            // comboBox2
+            // cmbCategoriaFiltro
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(238, 97);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(197, 21);
-            this.comboBox2.TabIndex = 4;
+            this.cmbCategoriaFiltro.FormattingEnabled = true;
+            this.cmbCategoriaFiltro.Location = new System.Drawing.Point(238, 97);
+            this.cmbCategoriaFiltro.Name = "cmbCategoriaFiltro";
+            this.cmbCategoriaFiltro.Size = new System.Drawing.Size(197, 21);
+            this.cmbCategoriaFiltro.TabIndex = 4;
             // 
             // label3
             // 
@@ -93,26 +93,25 @@
             this.bntNovoProduto.TabIndex = 5;
             this.bntNovoProduto.Text = "+ Novo Produto";
             this.bntNovoProduto.UseVisualStyleBackColor = false;
-            this.bntNovoProduto.Click += new System.EventHandler(this.bntNovoProduto_Click);
             // 
-            // button2
+            // btnGrid
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(666, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Atualizar Grid";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnGrid.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrid.Location = new System.Drawing.Point(666, 97);
+            this.btnGrid.Name = "btnGrid";
+            this.btnGrid.Size = new System.Drawing.Size(219, 23);
+            this.btnGrid.TabIndex = 6;
+            this.btnGrid.Text = "Atualizar Grid";
+            this.btnGrid.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvInformacao
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(849, 139);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvInformacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInformacao.Location = new System.Drawing.Point(36, 137);
+            this.dgvInformacao.Name = "dgvInformacao";
+            this.dgvInformacao.Size = new System.Drawing.Size(849, 139);
+            this.dgvInformacao.TabIndex = 7;
             // 
             // label4
             // 
@@ -225,25 +224,25 @@
             this.button3.Text = "Salvar";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnLimpar
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(191, 564);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 40);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Limpar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(191, 564);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(144, 40);
+            this.btnLimpar.TabIndex = 20;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnExcluir
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(341, 564);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(144, 40);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Excluir";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(341, 564);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(144, 40);
+            this.btnExcluir.TabIndex = 21;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -255,13 +254,13 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Status";
             // 
-            // comboBox1
+            // cmbStatusFiltro
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(35, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(197, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cmbStatusFiltro.FormattingEnabled = true;
+            this.cmbStatusFiltro.Location = new System.Drawing.Point(35, 97);
+            this.cmbStatusFiltro.Name = "cmbStatusFiltro";
+            this.cmbStatusFiltro.Size = new System.Drawing.Size(197, 21);
+            this.cmbStatusFiltro.TabIndex = 2;
             // 
             // cmbStatus
             // 
@@ -288,8 +287,8 @@
             this.ClientSize = new System.Drawing.Size(894, 616);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.label9);
@@ -302,17 +301,17 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dgvInformacao);
+            this.Controls.Add(this.btnGrid);
             this.Controls.Add(this.bntNovoProduto);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbCategoriaFiltro);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbStatusFiltro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmGestaoProdutos";
             this.Text = "FrmGestaoProdutos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformacao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,11 +320,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbCategoriaFiltro;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bntNovoProduto;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnGrid;
+        private System.Windows.Forms.DataGridView dgvInformacao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNome;
@@ -338,10 +337,10 @@
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbStatusFiltro;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label10;
     }

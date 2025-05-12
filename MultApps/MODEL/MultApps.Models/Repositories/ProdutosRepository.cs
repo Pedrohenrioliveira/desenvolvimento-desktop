@@ -13,28 +13,22 @@ namespace MultApps.Models.Repositories
 {
     public class ProdutoRepositories
     {
-        private readonly string _connectionString;
-
-        public ProdutoRepositories()
-        {
-            _connectionString = "Server=localhost;Database=multapps_dev;Uid=root;Pwd=root;";
-        }
-
+      public string ConnectionString = "Server=localhost;Database=multapps_dev;Uid=root;Pwd=root;";
 
         public DataTable ListarProdutos()
         {
             using (IDbConnection db = new MySqlConnection(ConnectionString))
             {
                 var comandoSql = @"SELECT p.id AS Id, 
-                                  p.url AS Url, 
-                                  c.nome AS CategoriaNome,
-                                  p.nome AS Nome, 
-                                  p.descricao AS Descricao, 
-                                  p.preco AS Preco, 
-                                  p.quantidade_estoque AS QuantidadeEstoque,
-                                  p.status AS Status
-                           FROM produto p
-                           INNER JOIN categoria c ON p.categoria_id = c.id";
+                                          p.url AS Url, 
+                                          c.nome AS CategoriaNome,
+                                          p.nome AS Nome, 
+                                          p.descricao AS Descricao, 
+                                          p.preco AS Preco, 
+                                          p.quantidade_estoque AS QuantidadeEstoque,
+                                          p.status AS Status
+                                   FROM produto p
+                                   INNER JOIN categoria c ON p.categoria_id = c.id";
 
                 var produtos = db.Query<Produto>(comandoSql).ToList();
 
@@ -67,8 +61,8 @@ namespace MultApps.Models.Repositories
             using (IDbConnection db = new MySqlConnection(ConnectionString))
             {
                 var comandoSql = @"INSERT INTO produto 
-                           (url, categoria_id, nome, descricao, preco, quantidade_estoque, status)
-                           VALUES (@Url, @CategoriaId, @Nome, @Descricao, @Preco, @QuantidadeEstoque, @Status)";
+                                   (url, categoria_id, nome, descricao, preco, quantidade_estoque, status)
+                                   VALUES (@Url, @CategoriaId, @Nome, @Descricao, @Preco, @QuantidadeEstoque, @Status)";
 
                 var parametros = new DynamicParameters();
                 parametros.Add("@Url", produto.Url);
@@ -83,20 +77,18 @@ namespace MultApps.Models.Repositories
                 return resultado > 0;
             }
         }
-
-
         public bool AdicionarProduto(Produto produto)
         {
             try
             {
-                using (var connection = new MySqlConnection(_connectionString))
+                using (var connection = new MySqlConnection(ConnectionString))
                 {
                     connection.Open();
 
                     string query = @"
-                INSERT INTO Produtos 
-                (Nome, Descricao, Categoria, Preco, Estoque, UrlImagem, Status)
-                VALUES (@Nome, @Descricao, @Categoria, @Preco, @Estoque, @UrlImagem, @Status);"
+                        INSERT INTO Produtos 
+                        (Nome, Descricao, Categoria, Preco, Estoque, UrlImagem, Status)
+                        VALUES (@Nome, @Descricao, @Categoria, @Preco, @Estoque, @UrlImagem, @Status);"
                     ;
 
                     var command = new MySqlCommand(query, connection);
@@ -123,7 +115,7 @@ namespace MultApps.Models.Repositories
         {
             try
             {
-                using (var connection = new MySqlConnection(_connectionString))
+                using (var connection = new MySqlConnection(ConnectionString))
                 {
                     connection.Open();
                     var query = "UPDATE Produto SET Nome = @Nome, Descricao = @Descricao, Categoria = @Categoria, " +
@@ -150,12 +142,11 @@ namespace MultApps.Models.Repositories
                 return false;
             }
         }
-
         public bool DeletarProduto(int id)
         {
             try
             {
-                using (var connection = new MySqlConnection(_connectionString))
+                using (var connection = new MySqlConnection(ConnectionString))
                 {
                     connection.Open();
                     var query = "DELETE FROM Produto WHERE Id = @Id";
@@ -175,4 +166,7 @@ namespace MultApps.Models.Repositories
             }
         }
     }
-}
+}       
+
+
+      
